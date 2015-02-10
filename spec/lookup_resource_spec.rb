@@ -5,11 +5,10 @@ def classes_to_test
    { klass:ReceiptBank::Models::Payee,
      additional_attributes: {} },
    { klass:ReceiptBank::Models::Project,
-     additional_attributes: {} },
-   { klass:ReceiptBank::Models::Category,
-     additional_attributes:{ code:"123" }} ]
+     additional_attributes: {} }]
 end
-
+#   { klass:ReceiptBank::Models::Category,
+#     additional_attributes:{ code:"123" }} ]
 describe "Lookups" do
   describe "Generic" do
     classes_to_test.each do |class_settings|
