@@ -5,7 +5,7 @@ require 'openssl'
 require 'simplecov'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
-#Coveralls.wear!
+Coveralls.wear!
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
