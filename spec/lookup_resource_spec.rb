@@ -1,19 +1,18 @@
 require 'spec_helper'
 def classes_to_test
   [{ klass:ReceiptBank::Models::Client,
-    additional_attributes: {} },
-  { klass:ReceiptBank::Models::Payee,
-    additional_attributes: {} },
-  { klass:ReceiptBank::Models::Project,
-    additional_attributes: {} },
-  { klass:ReceiptBank::Models::Category,
-    additional_attributes:{ code:"123" }} ]
+     additional_attributes: {} },
+   { klass:ReceiptBank::Models::Payee,
+     additional_attributes: {} },
+   { klass:ReceiptBank::Models::Project,
+     additional_attributes: {} },
+   { klass:ReceiptBank::Models::Category,
+     additional_attributes:{ code:"123" }} ]
 end
 
 describe "Lookups" do
   describe "Generic" do
     classes_to_test.each do |class_settings|
-
       class_type = class_settings[:klass]
       additional_attributes = class_settings[:additional_attributes]
       model_attributes = {id:"#{class_type.name.split("::").last}_1",
@@ -22,7 +21,6 @@ describe "Lookups" do
       test_mock_file = "#{class_type.name.split("::").last.downcase}"
 
       describe "#{class_type.name} API" do
-
         include_context "configuration"
 
         before(:each) do
@@ -40,7 +38,7 @@ describe "Lookups" do
           VCR.use_cassette("#{test_mock_file}_add_success") do
             model_instance =  class_type.new(client,model_attributes)
             model_instance.save
-            model_instances = class_type.find(client.current_user, {id:model_instance.id})
+            model_instances = class_type.find(client.current_user, id:model_instance.id)
             expect(model_instances.count).to eq 1
             expect(model_instances.first.name).to eq "#{class_type.name.split("::").last}_name"
           end
@@ -53,7 +51,7 @@ describe "Lookups" do
             model_instance.save
             model_instance.name = cmp_name
             model_instance.save
-            model_instances = class_type.find(client.current_user, {id:model_instance.id})
+            model_instances = class_type.find(client.current_user, id:model_instance.id)
             expect(model_instances.count).to eq 1
             expect(model_instances.first.name).to eq cmp_name
           end
@@ -64,7 +62,7 @@ describe "Lookups" do
             model_instance =  class_type.new(client,model_attributes)
             expect(model_instance.save.id).to eq model_instance.id
             expect(model_instance.delete).to be true
-            model_instances = class_type.find(client.current_user, {id:model_instance.id})
+            model_instances = class_type.find(client.current_user, id:model_instance.id)
             expect(model_instances.count).to eq 0
           end
         end

@@ -1,8 +1,5 @@
 module ReceiptBank
-
   module Models
-
-    class Project < ReceiptBank::Models::BaseModel;end
-
+    class Project < ReceiptBank::Models::BaseModel; end
   end
 end

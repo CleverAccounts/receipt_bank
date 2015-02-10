@@ -6,9 +6,9 @@ module ReceiptBank
       super(message)
     end
   end
-  class AuthenticationError < BaseError ;end
-  class ApiException < BaseError;end
-  class InvalidParameterError < BaseError;end
+  class AuthenticationError < BaseError; end
+  class ApiException < BaseError; end
+  class InvalidParameterError < BaseError; end
   class QuotaExceededError < BaseError; end
   class NotSupported < StandardError; end
   class DuplicateReceipt < BaseError; end

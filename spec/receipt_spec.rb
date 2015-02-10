@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "Receipt API" do
-
   include_context "configuration"
 
   before(:each) do
@@ -35,10 +34,10 @@ describe "Receipt API" do
     VCR.use_cassette("receipt_post_duplicate_success") do
       error_message = "This item was rejected as this file already exists within this account."
       receipt_file_path = File.expand_path("spec/receipts/receipt_1.jpg")
-      expect {
+      expect do
         ReceiptBank::Models::Receipt.upload_receipt(client.current_user,
                                                     receipt_file_path)
-      }.to raise_error(ReceiptBank::DuplicateReceipt, error_message)
+      end.to raise_error(ReceiptBank::DuplicateReceipt, error_message)
     end
   end
 
@@ -60,7 +59,6 @@ describe "Receipt API" do
       expect(receipt.save.id).to be > 0
     end
   end
-
 end
 
 

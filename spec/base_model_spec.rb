@@ -1,12 +1,10 @@
 require 'spec_helper'
 class MockModel < ReceiptBank::Models::BaseModel;end
 describe "base_model" do
-
   include_context "configuration"
   let(:attributes) { {id:1, name:"dummy name"} }
   let(:mock_model) { MockModel.new(client, attributes, true) }
   describe "Attributes" do
-
     it "has a client instance" do
       expect(mock_model.client_connection.class).to eq ReceiptBank::Client
     end

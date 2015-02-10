@@ -1,5 +1,5 @@
 module ReceiptBank
   module Models
-    class Client < ReceiptBank::Models::BaseModel;end
+    class Client < ReceiptBank::Models::BaseModel; end
   end
 end

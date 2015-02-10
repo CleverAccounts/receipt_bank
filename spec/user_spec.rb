@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "User API" do
-
   include_context "configuration"
 
   describe "Session" do
@@ -30,8 +29,8 @@ describe "User API" do
   describe "Receipts" do
     it "returns the list of receipts for the currently logged on user" do
       VCR.use_cassette("user_receipts_list_success") do
-          client.login(user_details[:email], user_details[:password])
-          client.current_user.receipts
+        client.login(user_details[:email], user_details[:password])
+        client.current_user.receipts
       end
     end
   end

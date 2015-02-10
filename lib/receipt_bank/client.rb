@@ -6,12 +6,12 @@ module ReceiptBank
 
     attr_accessor :base_uri, :oauth_token, :oauth_secret
 
-    def initialize(options = {base_uri:nil, oauth_token:nil, oauth_secret:nil})
-      raise ArgumentError.new("You must specifiy valid options") unless options.keys.count > 0
-      options.each { |k,v|
-        raise ArgumentError.new("#{k} can not be nil or empty") if v.nil? || v.empty?
-        self.send("#{k}=", v)
-      }
+    def initialize(options = { base_uri: nil, oauth_token: nil, oauth_secret: nil })
+      fail ArgumentError.new('You must specifiy valid options') unless options.keys.count > 0
+      options.each do |k, v|
+        fail ArgumentError.new("#{k} can not be nil or empty") if v.nil? || v.empty?
+        send("#{k}=", v)
+      end
     end
 
     def make_request_url(url, options)
@@ -23,11 +23,11 @@ module ReceiptBank
     end
 
     def query_post_api(url, options)
-      response = session.post { |req|
-          req.url url
-          req.headers['Content-Type'] = 'application/json'
-          req.body = options.to_json
-      }
+      response = session.post do |req|
+        req.url url
+        req.headers['Content-Type'] = 'application/json'
+        req.body = options.to_json
+      end
       JSON.parse(response.body)
     end
 
@@ -37,7 +37,7 @@ module ReceiptBank
       JSON.parse(response.body)
     end
 
-private
+    private
 
     def build_params(options)
       options.merge!(client_id: oauth_token.to_s, client_secret: oauth_secret)
@@ -55,6 +55,5 @@ private
         conn.use Faraday::Response::ReceiptBank
       end
     end
-
   end
 end
