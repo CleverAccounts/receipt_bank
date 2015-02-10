@@ -1,5 +1,5 @@
 [![Circle CI](https://circleci.com/gh/cshirley/receipt_bank.svg?style=svg)](https://circleci.com/gh/cshirley/receipt_bank)
-[![Coverage Status](https://coveralls.io/repos/cshirley/receipt_bank/badge.svg)](https://coveralls.io/r/cshirley/receipt_bank)
+[![Coverage Status](https://coveralls.io/repos/cshirley/receipt_bank/badge.svg?branch=master)](https://coveralls.io/r/cshirley/receipt_bank?branch=master)
 # ReceiptBank
 
 API wrapper for http://www.receiptbank.com leveraging Faraday.
