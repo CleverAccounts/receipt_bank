@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/users
+    body:
+      encoding: UTF-8
+      string: '{"authorization":{"client_id":"2133085712","client_secret":"09e4a4fd5e7a5c172ef2e183046dc89bcf4d18f9"},"user":{"first_name":"foo","last_name":"bar","email":"foo.bar@testuser.com","password":"11Password","currency":"","country":"","address_line_1":"","address_line_2":"","town":"","county":"","postcode":"","phone_number":"","company":"","account_id":"","referral_code":"","accountant_id":""}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 09 Feb 2015 11:32:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"33769bcbca3ec4f63812cda2f1d169c8"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cfa7ec9bae6cb72c00ec27794d331d20
+      X-Runtime:
+      - '3.303831'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"status":"OK","user_id":4370501348,"account_id":4370501348,"refresh_token":"6f744cc412a8ffd1e3d54c6ada631253e74f352d"}'
+    http_version: 
+  recorded_at: Mon, 09 Feb 2015 11:32:28 GMT
+recorded_with: VCR 2.9.3

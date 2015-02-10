@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/categories
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"b0b1453389a2e686a2a28a817a5c7532"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=8ed190ff1a1dec8007266fe79da53245; path=/; expires=Tue, 10-Feb-2015
+        10:53:55 GMT; HttpOnly
+      X-Request-Id:
+      - 3e07e6f6798529ec23106e539503d16c
+      X-Runtime:
+      - '0.046839'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"categories":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:55 GMT
+recorded_with: VCR 2.9.3

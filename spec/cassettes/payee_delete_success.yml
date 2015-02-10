@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_payees
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"6470cfb78f07f30aa1de291c75917d9c","payees":[{"id":"Payee_1","name":"Payee_name"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=5a42f9896fbf6b2da8842c8b17c6f695; path=/; expires=Tue, 10-Feb-2015
+        10:53:52 GMT; HttpOnly
+      X-Request-Id:
+      - b8a57cc3d56c64d09e011f13200de710
+      X-Runtime:
+      - '0.076023'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"payees":[{"id":"Payee_1","name":"Payee_name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:52 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/delete_payees
+    body:
+      encoding: UTF-8
+      string: '{"payees":[{"id":"Payee_1"}],"sessionid":"6470cfb78f07f30aa1de291c75917d9c"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=dbf4b696481e1150736793bd4169c327; path=/; expires=Tue, 10-Feb-2015
+        10:53:52 GMT; HttpOnly
+      X-Request-Id:
+      - 212ef723f1e551558cb8cd68fdd0c8bf
+      X-Runtime:
+      - '0.067858'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"payees":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:52 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/payees
+    body:
+      encoding: UTF-8
+      string: '{"id":"Payee_1","sessionid":"6470cfb78f07f30aa1de291c75917d9c"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=e7b1e640b2789de6158a791d8bf5e28e; path=/; expires=Tue, 10-Feb-2015
+        10:53:52 GMT; HttpOnly
+      X-Request-Id:
+      - a076fc664443a6a594763d5a1cac5145
+      X-Runtime:
+      - '0.102568'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"payees":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:52 GMT
+recorded_with: VCR 2.9.3

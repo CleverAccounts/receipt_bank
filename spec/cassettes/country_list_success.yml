@@ -1,0 +1,195 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/login
+    body:
+      encoding: UTF-8
+      string: '{"login":"foo.bar@testuser.com","password":"11Password"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:48:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=73d212b3d35548c7ce622878aac1010f; path=/; expires=Tue, 10-Feb-2015
+        10:48:05 GMT; HttpOnly
+      X-Request-Id:
+      - 2cd95ffa1a3cae8e27edd0eb62cdf126
+      X-Runtime:
+      - '0.057996'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"73d212b3d35548c7ce622878aac1010f","permissions":{"delete":1,"publish":0,"archive":1}}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:48:05 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/list_users
+    body:
+      encoding: UTF-8
+      string: '{"email":"foo.bar@testuser.com","sessionid":"73d212b3d35548c7ce622878aac1010f"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:48:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=78984fd331de3fe4a31c4ebcf9d2e275; path=/; expires=Tue, 10-Feb-2015
+        10:48:05 GMT; HttpOnly
+      X-Request-Id:
+      - e7cbf1a5c46ff8be6c7e5aa0768831d1
+      X-Runtime:
+      - '0.059566'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"users":[{"id":4370501348,"first_name":"foo","last_name":"bar","email":"foo.bar@testuser.com","account_id":4370501348,"suspended":false}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:48:05 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/available_countries
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"73d212b3d35548c7ce622878aac1010f"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:48:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8aaa8c97202309ecc5bd46a894e5883e
+      X-Runtime:
+      - '0.060278'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":245,"countries":["Afghanistan","Aland Islands","Albania","Algeria","American
+        Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua And Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia
+        and Herzegowina","Botswana","Bouvet Island","Brazil","British Indian Ocean
+        Territory","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape
+        Verde","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas
+        Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, the
+        Democratic Republic of the","Cook Islands","Costa Rica","Cote d''Ivoire","Croatia","Cuba","Cyprus","Czech
+        Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El
+        Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands
+        (Malvinas)","Faroe Islands","Fiji","Finland","France","French Guiana","French
+        Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard
+        and McDonald Islands","Holy See (Vatican City State)","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran,
+        Islamic Republic of","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Korea,
+        Democratic People''s Republic of","Korea, Republic of","Kuwait","Kyrgyzstan","Lao
+        People''s Democratic Republic","Latvia","Lebanon","Lesotho","Liberia","Libyan
+        Arab Jamahiriya","Liechtenstein","Lithuania","Luxembourg","Macao","Macedonia,
+        The Former Yugoslav Republic Of","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall
+        Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia,
+        Federated States of","Moldova, Republic of","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","Netherlands
+        Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk
+        Island","Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Palestine,
+        State of","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto
+        Rico","Qatar","Reunion","Romania","Russian Federation","Rwanda","Saint Barthelemy","Saint
+        Helena","Saint Kitts and Nevis","Saint Lucia","Saint Pierre and Miquelon","Saint
+        Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi
+        Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon
+        Islands","Somalia","South Africa","South Georgia and the South Sandwich Islands","Spain","Sri
+        Lanka","Sudan","Suriname","Svalbard and Jan Mayen","Swaziland","Sweden","Switzerland","Syrian
+        Arab Republic","Taiwan, Province of China","Tajikistan","Tanzania, United
+        Republic of","Thailand","Timor-Leste","Togo","Tokelau","Tonga","Trinidad and
+        Tobago","Tunisia","Turkey","Turkmenistan","Turks and Caicos Islands","Tuvalu","Uganda","Ukraine","United
+        Arab Emirates","United Kingdom","United States","United States Minor Outlying
+        Islands","Uruguay","Uzbekistan","Vanuatu","Venezuela","Viet Nam","Virgin Islands,
+        British","Virgin Islands, U.S.","Wallis and Futuna","Western Sahara","Yemen","Zambia","Zimbabwe"]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:48:05 GMT
+recorded_with: VCR 2.9.3

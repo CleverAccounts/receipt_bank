@@ -1,0 +1,168 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_projects
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"10ae77fe0adb8c008a15b6f93e6447a5","projects":[{"id":"Project_1","name":"Project_name"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=9f230ec15d1a416e3d70752135c048f5; path=/; expires=Tue, 10-Feb-2015
+        10:53:54 GMT; HttpOnly
+      X-Request-Id:
+      - f8a52b9bb4779c1bfa18e5d76de4e5ea
+      X-Runtime:
+      - '0.057569'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"projects":[{"id":"Project_1","name":"Project_name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:54 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_projects
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"10ae77fe0adb8c008a15b6f93e6447a5","projects":[{"id":"Project_1","name":"updated
+        ReceiptBank::Models::Project name"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=5e75ecb2ec238e0ed9e87a30ca6bee82; path=/; expires=Tue, 10-Feb-2015
+        10:53:54 GMT; HttpOnly
+      X-Request-Id:
+      - c25469ea0290815f92b3cb4a05f63e23
+      X-Runtime:
+      - '0.068487'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"projects":[{"id":"Project_1","name":"updated ReceiptBank::Models::Project
+        name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:54 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/projects
+    body:
+      encoding: UTF-8
+      string: '{"id":"Project_1","sessionid":"10ae77fe0adb8c008a15b6f93e6447a5"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=b67aacffd3ab7cffab3a0ce0dd63dc12; path=/; expires=Tue, 10-Feb-2015
+        10:53:54 GMT; HttpOnly
+      X-Request-Id:
+      - ae16990b57172fc2b28451e8146f7db7
+      X-Runtime:
+      - '0.074168'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"projects":[{"id":"Project_1","name":"updated ReceiptBank::Models::Project
+        name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:54 GMT
+recorded_with: VCR 2.9.3

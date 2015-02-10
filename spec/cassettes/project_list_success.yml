@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/projects
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"34ba1eadd8d04a7945969a461a5626c7"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=3d69342f14d6e399626aa7ea92070112; path=/; expires=Tue, 10-Feb-2015
+        10:53:53 GMT; HttpOnly
+      X-Request-Id:
+      - 505e7bc74bc0bc752d941acef0c908f0
+      X-Runtime:
+      - '0.058849'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"projects":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:53 GMT
+recorded_with: VCR 2.9.3

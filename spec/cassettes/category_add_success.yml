@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_categories
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"22f9ea97ccf49cf9699219fe4c30e191","categories":[{"id":"Category_1","name":"Category_name","code":"123"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=17f2aebd25830e9c9433ef6a4f3f46bf; path=/; expires=Tue, 10-Feb-2015
+        10:53:55 GMT; HttpOnly
+      X-Request-Id:
+      - 5cadc46f060e60a533113251067ed358
+      X-Runtime:
+      - '0.084570'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"categories":[{"id":"Category_1","name":"Category_name","code":"123"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:55 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/categories
+    body:
+      encoding: UTF-8
+      string: '{"id":"Category_1","sessionid":"22f9ea97ccf49cf9699219fe4c30e191"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=27fc3c3d7eed6fc76740e7d2cb6b55ff; path=/; expires=Tue, 10-Feb-2015
+        10:53:56 GMT; HttpOnly
+      X-Request-Id:
+      - 754afa3e2dbff3a3df3d693e229b1798
+      X-Runtime:
+      - '0.060314'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"categories":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:56 GMT
+recorded_with: VCR 2.9.3

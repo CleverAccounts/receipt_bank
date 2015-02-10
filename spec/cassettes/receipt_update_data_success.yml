@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/inbox
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"37b95523addef14f0c818a55c9106734"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 12:19:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=78d7ea8839bc91e98c90ed80985f5227; path=/; expires=Tue, 10-Feb-2015
+        13:19:01 GMT; HttpOnly
+      X-Request-Id:
+      - 47d776fdde707faab1d0a8269991c54a
+      X-Runtime:
+      - '0.055482'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"receipts":[{"id":5304133527,"type":"receipt","date":"2015-02-09","invoice_number":null,"due_date":"","paid":false,"payee":null,"payee_id":null,"client":null,"project":null,"category":"Postage","category_id":null,"category_code":null,"currency":"GBP","total_amount":null,"vat_amount":"0.0","base_currency":"GBP","base_total":0.0,"base_vat":"0.0","payment_method":"unknown","payment_method_ref":null,"description":"test
+        receipt","status":"complete","integration_status":"Ready for Export","user_status":"processed","integration_state":null,"integration_state_message":null,"processed":1}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 12:19:01 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/update_receipt_data
+    body:
+      encoding: UTF-8
+      string: '{"data":"{\"description\":\"test receipt description\"}","id":5304133527,"sessionid":"37b95523addef14f0c818a55c9106734"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 12:19:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=5e71698cd81c577af4760ba2d5350348; path=/; expires=Tue, 10-Feb-2015
+        13:19:02 GMT; HttpOnly
+      X-Request-Id:
+      - 6db1fd4db328406758223610dcdc816b
+      X-Runtime:
+      - '0.203574'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"receipts":[{"id":5304133527,"type":"receipt","date":"2015-02-09","invoice_number":null,"due_date":"","paid":false,"payee":null,"payee_id":null,"client":null,"project":null,"category":"Postage","category_id":null,"category_code":null,"currency":"GBP","total_amount":null,"vat_amount":"0.0","base_currency":"GBP","base_total":0.0,"base_vat":"0.0","payment_method":"unknown","payment_method_ref":null,"description":"test
+        receipt description","status":"complete","integration_status":"Ready for Export","user_status":"processed","integration_state":null,"integration_state_message":null,"processed":1}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 12:19:02 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_categories
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"e5fbab4bf610dbd51b700b1626c9d4ad","categories":[{"id":"Category_1","name":"Category_name","code":"123"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=8ba06f0647183cffd99b8af47221ca57; path=/; expires=Tue, 10-Feb-2015
+        10:53:56 GMT; HttpOnly
+      X-Request-Id:
+      - 04e42714a96b9396d78c41158f597e71
+      X-Runtime:
+      - '0.090277'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"categories":[{"id":"Category_1","name":"Category_name","code":"123"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:56 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_categories
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"e5fbab4bf610dbd51b700b1626c9d4ad","categories":[{"id":"Category_1","name":"updated
+        ReceiptBank::Models::Category name","code":"123"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=e4df506bf9a8dd77f7aa1bf380a3c4a4; path=/; expires=Tue, 10-Feb-2015
+        10:53:56 GMT; HttpOnly
+      X-Request-Id:
+      - ea07fc2430b91f3b90e0439a4966c8ef
+      X-Runtime:
+      - '0.069233'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"categories":[{"id":"Category_1","name":"updated ReceiptBank::Models::Category
+        name","code":"123"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:56 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/categories
+    body:
+      encoding: UTF-8
+      string: '{"id":"Category_1","sessionid":"e5fbab4bf610dbd51b700b1626c9d4ad"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=cb8c5dd2c742adc8ac0dafd001bea9c4; path=/; expires=Tue, 10-Feb-2015
+        10:53:56 GMT; HttpOnly
+      X-Request-Id:
+      - f0237357ec38b6fcd3774d8922a9032a
+      X-Runtime:
+      - '0.080018'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"categories":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:56 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,168 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_payees
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"4acf04a569824e0aed26dea5329f409c","payees":[{"id":"Payee_1","name":"Payee_name"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=283a200be55c84779778e5e68d7134fa; path=/; expires=Tue, 10-Feb-2015
+        10:53:51 GMT; HttpOnly
+      X-Request-Id:
+      - 76b2b47299d438869fb6fbcf413634c8
+      X-Runtime:
+      - '0.053481'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"payees":[{"id":"Payee_1","name":"Payee_name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:51 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_payees
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"4acf04a569824e0aed26dea5329f409c","payees":[{"id":"Payee_1","name":"updated
+        ReceiptBank::Models::Payee name"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=648b584a2dd73f91cc4724347aeae2e0; path=/; expires=Tue, 10-Feb-2015
+        10:53:51 GMT; HttpOnly
+      X-Request-Id:
+      - 0ddcc09872bd0bf173f233c648dab8ba
+      X-Runtime:
+      - '0.073960'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"payees":[{"id":"Payee_1","name":"updated ReceiptBank::Models::Payee
+        name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:51 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/payees
+    body:
+      encoding: UTF-8
+      string: '{"id":"Payee_1","sessionid":"4acf04a569824e0aed26dea5329f409c"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=5e17df5ecbb2af3a7e4b505adc373e0d; path=/; expires=Tue, 10-Feb-2015
+        10:53:51 GMT; HttpOnly
+      X-Request-Id:
+      - b385fc887ca3598026e807c2cbd16f51
+      X-Runtime:
+      - '0.068749'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"payees":[{"id":"Payee_1","name":"updated ReceiptBank::Models::Payee
+        name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:51 GMT
+recorded_with: VCR 2.9.3

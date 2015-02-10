@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_categories
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"296abcd5dce16306d7e6772f707ff3c0","categories":[{"id":"Category_1","name":"Category_name","code":"123"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=da82548c1a863fe0e682118b985f98b0; path=/; expires=Tue, 10-Feb-2015
+        10:53:57 GMT; HttpOnly
+      X-Request-Id:
+      - 36d435e819c4dea198e85039d1aa1b9e
+      X-Runtime:
+      - '0.072469'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"categories":[{"id":"Category_1","name":"Category_name","code":"123"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:57 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/delete_categories
+    body:
+      encoding: UTF-8
+      string: '{"categories":[{"id":"Category_1"}],"sessionid":"296abcd5dce16306d7e6772f707ff3c0"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=4b08cab99df7fd9744eaf4132f67fe7f; path=/; expires=Tue, 10-Feb-2015
+        10:53:57 GMT; HttpOnly
+      X-Request-Id:
+      - 7fc6dc9bc4d9f55e74fc1ad7e4c1aa6d
+      X-Runtime:
+      - '0.067342'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"categories":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:57 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/categories
+    body:
+      encoding: UTF-8
+      string: '{"id":"Category_1","sessionid":"296abcd5dce16306d7e6772f707ff3c0"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=5f70e92c276cc68f7ff223bcf2e97391; path=/; expires=Tue, 10-Feb-2015
+        10:53:57 GMT; HttpOnly
+      X-Request-Id:
+      - f79e01bae128116b5b1f58fbbbe08c8d
+      X-Runtime:
+      - '0.083201'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":0,"categories":[]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:57 GMT
+recorded_with: VCR 2.9.3

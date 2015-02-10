@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.rb-logistics.com/oauth/login_token?client_id=2133085712&client_secret=09e4a4fd5e7a5c172ef2e183046dc89bcf4d18f9&refresh_token=6f744cc412a8ffd1e3d54c6ada631253e74f352d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 09 Feb 2015 17:02:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b7d01984c3027e6bae07ca17248c6be9
+      X-Runtime:
+      - '0.098501'
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger 4.0.48
+    body:
+      encoding: UTF-8
+      string: '{"login_token":"d670e1df71cf6bed399f201385b91d62375f6229","expires_in":599,"token_type":"login"}'
+    http_version: 
+  recorded_at: Mon, 09 Feb 2015 17:02:25 GMT
+recorded_with: VCR 2.9.3

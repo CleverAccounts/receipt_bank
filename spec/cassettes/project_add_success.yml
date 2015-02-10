@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/add_projects
+    body:
+      encoding: UTF-8
+      string: '{"sessionid":"00838b1100d229c9c9f08ca5f42206fd","projects":[{"id":"Project_1","name":"Project_name"}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=1f2433ace06105b6f746eb0297ae3d16; path=/; expires=Tue, 10-Feb-2015
+        10:53:53 GMT; HttpOnly
+      X-Request-Id:
+      - 3d7a8c74d00511c60a4a2cf8522770b5
+      X-Runtime:
+      - '0.051582'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"projects":[{"id":"Project_1","name":"Project_name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:53 GMT
+- request:
+    method: post
+    uri: https://app.rb-logistics.com/api/projects
+    body:
+      encoding: UTF-8
+      string: '{"id":"Project_1","sessionid":"00838b1100d229c9c9f08ca5f42206fd"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 10 Feb 2015 09:53:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _session_id=ca785fd277e3373f72621962aa643c60; path=/; expires=Tue, 10-Feb-2015
+        10:53:53 GMT; HttpOnly
+      X-Request-Id:
+      - 63a0f0501e1ef1e70c6ca2cca4574361
+      X-Runtime:
+      - '0.051109'
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Powered-By:
+      - Phusion Passenger 4.0.50
+    body:
+      encoding: UTF-8
+      string: '{"size":1,"projects":[{"id":"Project_1","name":"Project_name"}]}'
+    http_version: 
+  recorded_at: Tue, 10 Feb 2015 09:53:53 GMT
+recorded_with: VCR 2.9.3
