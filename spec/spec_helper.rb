@@ -1,4 +1,4 @@
-require 'byebug'
+require 'byebug' unless ENV.key?('COVERALLS_REPO_TOKEN')
 require 'simplecov'
 require 'receipt_bank'
 require 'vcr'
