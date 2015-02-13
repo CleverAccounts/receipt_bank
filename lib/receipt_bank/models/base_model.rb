@@ -131,5 +131,21 @@ module ReceiptBank
         true
       end
     end
+    class ReadOnlyModel < BaseModel
+
+        def initialize(client, optinos, loaded_from_server = false)
+          fail ReceiptBank::NotSupported.new('') unless loaded_from_server
+          super
+        end
+
+        def self.process_results(client, results)
+          results[resource_name.split('_').last].inject([]) do |arr, currency_name|
+            arr << new(client, { name: currency_name }, true)
+          end
+        end
+
+        def save; false; end
+        def detele; false; end
+    end
   end
 end
