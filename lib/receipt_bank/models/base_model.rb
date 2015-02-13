@@ -47,7 +47,7 @@ module ReceiptBank
       end
 
       def save
-        return self unless is_dirty?
+        return self unless dirty?
         options = { self.class.resource_name => [build_changed_data] }.merge(build_session_data)
         response = client_connection.query_post_api(self.class.build_url(:add), options)
         set_all_attributes(response[self.class.resource_name].first, true) if response['size'] > 0
@@ -62,7 +62,7 @@ module ReceiptBank
         true
       end
 
-      def is_dirty?
+      def dirty?
         get_dirty_attributes.size > 0
       end
 
@@ -97,12 +97,12 @@ module ReceiptBank
       end
 
       def get_dirty_attributes
-        @attributes ? @attributes.select { |_k, v| v[:is_dirty] } : []
+        @attributes ? @attributes.select { |_k, v| v[:dirty] } : []
       end
 
       def clear_dirty_flags
         @attributes.each do |k, v|
-          @attributes[k] = { old_value: v[:value], value: v[:value], is_dirty: false }
+          @attributes[k] = { old_value: v[:value], value: v[:value], dirty: false }
         end
       end
 
@@ -123,7 +123,7 @@ module ReceiptBank
       def set_attribute(key, value, loaded = false)
         @attributes[key] = { old_value: get_attribute(key) || value,
                              value: value,
-                             is_dirty: !loaded || get_attribute(key) == value }
+                             dirty: !loaded || get_attribute(key) == value }
         true
       end
     end
