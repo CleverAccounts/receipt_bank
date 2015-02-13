@@ -55,11 +55,15 @@ module ReceiptBank
       end
 
       def reload
-        response = self.class.find(client_connection, id: id)
-        return false if response['size'] ==  0
-        remote_data = response[self.class.resource_name].select { |model_instance| model_instance.id == id }.first
-        set_all_attributes(remote_data, true)
+        response = self.class.find(client_connection.current_user, {id: id})
+        return false unless response.count == 1
+        remote_data = response.first
+        set_all_attributes(remote_data.attributes, true)
         true
+      end
+
+      def attributes
+        @attributes ||= {}
       end
 
       def dirty?
@@ -85,29 +89,29 @@ module ReceiptBank
 
       def build_changed_data
         get_dirty_attributes.keys.inject({}) do |h, k|
-          if @attributes[k][:value] && k != 'id' && !@attributes[k][:value].to_s.empty?
-            h[k] = @attributes[k][:value]
+          if self.attributes[k][:value] && k != 'id' && !self.attributes[k][:value].to_s.empty?
+            h[k] = self.attributes[k][:value]
           end
           h
         end
       end
 
       def has_attribute?(key)
-        @attributes && @attributes.key?(key.gsub(/=/, ''))
+        self.attributes && self.attributes.key?(key.gsub(/=/, ''))
       end
 
       def get_dirty_attributes
-        @attributes ? @attributes.select { |_k, v| v[:dirty] } : []
+        self.attributes ? self.attributes.select { |_k, v| v[:dirty] } : []
       end
 
       def clear_dirty_flags
-        @attributes.each do |k, v|
-          @attributes[k] = { old_value: v[:value], value: v[:value], dirty: false }
+        self.attributes.each do |k, v|
+          self.attributes[k] = { old_value: v[:value], value: v[:value], dirty: false }
         end
       end
 
       def get_attribute(key)
-        has_attribute?(key) ? @attributes[key][:value] : nil
+        has_attribute?(key) ? self.attributes[key][:value] : nil
       end
 
       def set_all_attributes(attributes, loaded = false)
@@ -121,7 +125,7 @@ module ReceiptBank
       end
 
       def set_attribute(key, value, loaded = false)
-        @attributes[key] = { old_value: get_attribute(key) || value,
+        self.attributes[key] = { old_value: get_attribute(key) || value,
                              value: value,
                              dirty: !loaded || get_attribute(key) == value }
         true

@@ -10,6 +10,11 @@ end
 #   { klass:ReceiptBank::Models::Category,
 #     additional_attributes:{ code:"123" }} ]
 describe 'Lookups' do
+  describe 'Category Model' do
+    it 'overides the resource name' do
+      expect(ReceiptBank::Models::Category.resource_name).to eq 'categories'
+    end
+  end
   describe 'Generic' do
     classes_to_test.each do |class_settings|
       class_type = class_settings[:klass]

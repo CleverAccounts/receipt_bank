@@ -14,6 +14,14 @@ describe 'Receipt API' do
     end
   end
 
+  it 'reloads receipts data fromt the server items' do
+    VCR.use_cassette('receipt_reload_success') do
+      receipts = ReceiptBank::Models::Receipt.inbox(client.current_user)
+      receipt = receipts.first
+      receipt.reload
+    end
+  end
+
   it 'retreives the image of the first receipt' do
     VCR.use_cassette('receipt_retreives_image_success') do
       receipts = ReceiptBank::Models::Receipt.inbox(client.current_user)
@@ -27,6 +35,13 @@ describe 'Receipt API' do
     VCR.use_cassette('receipt_list_all_success') do
       receipts = ReceiptBank::Models::Receipt.find(client.current_user)
       expect(receipts.class).to eq Array
+    end
+  end
+
+  it 'publishes a users receipts' do
+    VCR.use_cassette('receipt_publish_success') do
+      receipts = ReceiptBank::Models::Receipt.find(client.current_user)
+      receipts.first.publish
     end
   end
 

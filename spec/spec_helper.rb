@@ -1,3 +1,4 @@
+require 'byebug'
 require 'simplecov'
 require 'receipt_bank'
 require 'vcr'

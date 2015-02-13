@@ -30,7 +30,7 @@ module ReceiptBank
 
       def publish
         options = { sessionid: session[:session_id], id: id }
-        user.client_connection.query_post_api("#{BASE_URI}publish_receipt", options)
+        client_connection.query_post_api("#{BASE_URI}publish_receipt", options)
       end
 
       def save

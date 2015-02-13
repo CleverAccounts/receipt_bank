@@ -27,10 +27,20 @@ describe 'base_model' do
       expect(mock_model.dirty?).to eq true
     end
 
+    it 'raises error when method does not exist' do
+      expect { mock_model.foo_bar }.to raise_error
+    end
     it 'finds changed attribtues' do
       mock_model.name = 'foobar'
       expect(mock_model.get_dirty_attributes.keys.include?('name')).to eq true
       expect(mock_model.get_dirty_attributes.keys.include?('id')).to eq false
+    end
+    it 'clears the dirty flags' do
+      mock_model.name = 'foobar'
+      expect(mock_model.get_dirty_attributes.keys.include?('name')).to eq true
+      expect(mock_model.get_dirty_attributes.keys.include?('id')).to eq false
+      mock_model.clear_dirty_flags
+      expect(mock_model.get_dirty_attributes.keys.count).to be 0
     end
   end
 end

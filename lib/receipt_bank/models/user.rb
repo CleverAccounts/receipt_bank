@@ -21,9 +21,8 @@ module ReceiptBank
         ReceiptBank::Models::Receipt.find(self)
       end
 
-      def create_receipt(file_name, options = {})
-        ReceiptBank::Models::Receipt.new(client_connection,
-                                         { local_image_file_path: file_name }.merge(options))
+      def create_receipt(options = {})
+        ReceiptBank::Models::Receipt.new(client_connection, options, false)
       end
     end
   end
